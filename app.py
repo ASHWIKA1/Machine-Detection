@@ -10,11 +10,16 @@ from fpdf import FPDF
 import base64
 import hashlib
 from twilio.rest import Client
-twilio_sid = 'YOUR AUTH'
-twilio_token = '242#############2'
-twilio_number = '+17786765645'  # example Twilio number
+import streamlit as st
 
-sms_recipients = ['+91##########']  # or a hard-coded list
+
+
+twilio_sid = st.secrets["TWILIO"]["SID"]
+twilio_token = st.secrets["TWILIO"]["TOKEN"]
+twilio_number = st.secrets["TWILIO"]["NUMBER"]
+sms_recipients = st.secrets["TWILIO"]["RECIPIENTS"]
+
+  # or a hard-coded list
 
 # and remove or comment out the sidebar config input section
 
@@ -420,9 +425,9 @@ def main():
                 for number in sms_recipients:
                     try:
                         sid = send_sms_alert(number, body, twilio_sid, twilio_token, twilio_number)
-                        st.sidebar.success(f"SMS alert sent to {number} (SID: {sid})")
+                        st.sidebar.success(f"SMS alert sent Successfully")
                     except Exception as e:
-                        st.sidebar.error(f"Failed to send SMS to {number}: {e}")
+                        st.sidebar.error(f"Failed to send SMS ")
             else:
                 st.sidebar.warning("SMS alert NOT sent: incomplete Twilio configuration or phone number(s).")
 
