@@ -15,9 +15,10 @@ import streamlit as st
 
 
 twilio_sid = st.secrets["TWILIO"]["SID"]
-twilio_token = st.secrets["TWILIO"]["TOKEN"]
-twilio_number = st.secrets["TWILIO"]["NUMBER"]
+twilio_token = st.secrets["TWILIO"]["AUTH_TOKEN"]
+twilio_number = st.secrets["TWILIO"]["FROM_NUMBER"]
 sms_recipients = st.secrets["TWILIO"]["RECIPIENTS"]
+
 
   # or a hard-coded list
 
@@ -351,7 +352,7 @@ def main():
     if st.sidebar.button("Logout"):
         for key in list(st.session_state.keys()):
             del st.session_state[key]
-        st.experimental_rerun()
+        st.rerun()
 
     # Twilio SMS Alert Config
 
