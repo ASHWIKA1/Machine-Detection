@@ -10,7 +10,7 @@ from fpdf import FPDF
 import base64
 import hashlib
 from twilio.rest import Client
-twilio_sid = 'AUTH TOkEN'
+twilio_sid = 'YOUR AUTH'
 twilio_token = '242#############2'
 twilio_number = '+17786765645'  # example Twilio number
 
