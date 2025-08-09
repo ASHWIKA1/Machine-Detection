@@ -12,7 +12,10 @@ import hashlib
 from twilio.rest import Client
 import streamlit as st
 
-
+twilio_sid = "y8638761278467821"
+twilio_token = "1122134567"
+twilio_number = "+12234567"
+sms_recipients = "23456789"
 
 
 
