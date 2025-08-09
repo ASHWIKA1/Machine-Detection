@@ -11,8 +11,8 @@ import base64
 import hashlib
 from twilio.rest import Client
 twilio_sid = 'AUTH TOkEN'
-twilio_token = '1426e9a832c464a6c8841dc63d8bb158'
-twilio_number = '+17435001661'  # example Twilio number
+twilio_token = '242#############2'
+twilio_number = '+17786765645'  # example Twilio number
 
 sms_recipients = ['+91##########']  # or a hard-coded list
 
