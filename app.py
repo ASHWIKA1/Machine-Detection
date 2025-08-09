@@ -14,10 +14,6 @@ import streamlit as st
 
 
 
-twilio_sid = st.secrets["TWILIO"]["SID"]
-twilio_token = st.secrets["TWILIO"]["AUTH_TOKEN"]
-twilio_number = st.secrets["TWILIO"]["FROM_NUMBER"]
-sms_recipients = st.secrets["TWILIO"]["RECIPIENTS"]
 
 
   # or a hard-coded list
